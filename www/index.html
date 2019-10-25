@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <meta http-equiv="Content-Security-Policy" 
+  content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval';connect-src *;">
+
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
 
@@ -14,8 +16,62 @@
   <link rel="stylesheet" href="css/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="components/jquery-3.4.1.min.js"></script>
+  <script src="components/functions.js"></script>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="row">
+      <div class="col col-xs-12 text-center">
+        <h1>Cadastro de usuário</h1>
+      </div>
+    </div>
+    
+    <form id="formCadastra">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o nome">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Digite o email">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite a senha">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" id="salvar">Salvar</button>
+          </div>
+        </div>
+      </div>
+
+      <input type="hidden" name="cadastrar" value="1">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <a href="listar.html">
+              <button type="button" class="btn btn-info btn-lg btn-block">Listar</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
 </body>
 </html>
